@@ -3,10 +3,6 @@
 		{
 			"src": "/api/(.*)",
 			"dest": "https://ai.aiofauna.com/api/$1"
-		},
-		{
-			"src": "/(.*)",
-			"dest": "/index.html"
 		}
 	]
 }
