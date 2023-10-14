@@ -13,13 +13,8 @@ const props = defineProps<{
     v-model="modelValue"
     v-bind="$attrs"
     type="text"
-    p="x-4 y-2"
-    w="250px"
-    text="center"
-    bg="transparent"
-    border="~ rounded gray-200 dark:gray-700"
-    outline="none active:none"
-    placeholder="Enter your name"
+    class="w-full no-outline border-none bg-transparent text-center px-4 py-2  sticky text-black dark:text-white"
+    placeholder="Enter your prompt..."
     @keydown.enter="props.onEnter"
   />
 </template>

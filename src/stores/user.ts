@@ -1,3 +1,4 @@
+import type { User, Message } from "~/types";
 import { defineStore, acceptHMRUpdate } from "pinia";
 
 export const useStore = defineStore("state", () => {
@@ -5,7 +6,9 @@ export const useStore = defineStore("state", () => {
     name: "",
     notifications: [] as { message: string; status: string }[],
     eventSource: null as EventSource | null,
-    messages: [] as string[],
+    messages: [] as Message[],
+    token: null as string | null,
+    user: null as User | null,
   });
 
   const setState = (newState: any) => {

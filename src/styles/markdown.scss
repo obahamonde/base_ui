@@ -1,3 +1,6 @@
+@import url("https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css");
+
 .prose pre:not(.shiki) {
   padding: 0;
 }
@@ -26,3 +29,4 @@ html.dark .shiki-light {
 html:not(.dark) .shiki-dark {
   display: none;
 }
+

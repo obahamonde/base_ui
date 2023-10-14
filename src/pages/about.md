@@ -3,19 +3,24 @@ title: About
 ---
 
 <div class="text-center">
-  <!-- You can use Vue components inside markdown -->
-  <div i-carbon-dicom-overlay class="text-4xl -mb-6 m-auto" />
   <h3>About</h3>
 </div>
 
-[Vitesse](https://github.com/antfu/vitesse) is an opinionated [Vite](https://github.com/vitejs/vite) starter template made by [@antfu](https://github.com/antfu) for mocking apps swiftly. With **file-based routing**, **components auto importing**, **markdown support**, I18n, PWA and uses **UnoCSS** for styling and icons.
+[AioFauna](https://github.com/antfu/aiofauna) is an opinionated Python backend framework made by [@obahamonde](https://github.com/aiofauna) for building backend applications swiftly. With **automatic Swagger UI docs**, **FastAPI-like syntax**, **FaunaModel ODM out of the box** uses **APIClient** for seamless integrations.
 
-```js
-// syntax highlighting example
-function vitesse() {
-  const foo = "bar";
-  console.log(foo);
-}
+```python
+from aiofauna import APIServer
+
+app = APIServer()
+
+@app.get("/")
+async def hello():
+    return {"message": "Hello World"}
 ```
 
-Check out the [GitHub repo](https://github.com/antfu/vitesse) for more details.
+Check out the [GitHub repo](https://github.com/obahamonde/aiofauna) for more details.
+
+<route lang="yaml">
+  meta:
+    layout: 'home'
+</route>

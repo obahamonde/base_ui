@@ -1,5 +1,14 @@
+
+import { use } from 'matter';
 <template>
-  <main class="mb-12">
+  
+  <Auth>
+   <template #default="{ user, token }">
+      <Navbar />
+    <main class="row center">
     <RouterView />
-  </main>
+    </main>
+    <Toolbar :user="user" :token="token" />
+    </template>
+  </Auth>
 </template>

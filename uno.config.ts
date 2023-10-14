@@ -98,6 +98,10 @@ export default defineConfig({
       "card-title",
       "mb-3 text-2xl text-title text-black dark:text-white font-semibold",
     ],
+    [
+      'toolbar-btn',
+      'inline-flex items-center justify-center text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 text-zinc-100 rounded-full hover:bg-gray-600 hover:text-zinc-100 p-1'
+    ]
   ],
   presets: [
     presetUno(),
@@ -133,8 +137,8 @@ export default defineConfig({
     [
       /^x(\d+)$/,
       ([, d]) => ({
-        height: `${d}rem`,
-        width: `${d}rem`,
+        height: `${d}em`,
+        width: `${d}em`,
       }),
     ],
     [

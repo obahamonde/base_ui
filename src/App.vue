@@ -1,21 +1,18 @@
 <script setup lang="ts">
-// https://github.com/vueuse/head
-// you can use this to manipulate the document head in any components,
-// they will be rendered correctly in the html results with vite-ssg
 useHead({
-  title: "Vitesse",
+  title: "AWS UG Peru: Development platform powered by ChatGPT",
   meta: [
-    { name: "description", content: "Opinionated Vite Starter Template" },
+    { name: "description", content: "This is a Demo of an MVP IDP powered by the large language model GPT-4" },
     {
       name: "theme-color",
-      content: () => (isDark.value ? "#00aba9" : "#ffffff"),
+      content: () => (isDark.value ? "#0c0c0c" : "#ffffff"),
     },
   ],
   link: [
     {
       rel: "icon",
       type: "image/svg+xml",
-      href: () => (preferredDark.value ? "/favicon-dark.svg" : "/favicon.svg"),
+      href: "/aiofauna.png",
     },
   ],
 });

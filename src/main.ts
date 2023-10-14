@@ -5,8 +5,8 @@ import { createApp } from "vue";
 import { Icon } from "@iconify/vue";
 import App from "./App.vue";
 import generatedRoutes from "~pages";
+import { createAuth0 } from "@auth0/auth0-vue";
 import piniaPluginPersistedstate from "pinia-plugin-persistedstate";
-import "@unocss/reset/tailwind.css";
 import "./styles/main.scss";
 import "uno.css";
 
@@ -17,4 +17,17 @@ const router = createRouter({
 });
 const pinia = createPinia();
 pinia.use(piniaPluginPersistedstate);
-createApp(App).use(pinia).component("Icon", Icon).use(router).mount("#app");
+createApp(App)
+  .use(pinia)
+  .component("Icon", Icon)
+  .use(router)
+  .use(
+    createAuth0({
+      domain: "dev-tvhqmk7a.us.auth0.com",
+      clientId: "53p0EBRRWxSYA3mSywbxhEeIlIexYWbs",
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+      },
+    }),
+  )
+  .mount("#app");
