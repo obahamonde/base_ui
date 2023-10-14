@@ -10,3 +10,5 @@ node_modules
 cypress/downloads
 .venv
 .mypy_cache
+# Local Netlify folder
+.netlify
