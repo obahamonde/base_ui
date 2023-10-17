@@ -4,6 +4,7 @@ import Chatbot from "~/components/Chatbot.vue";
 import Functions from "~/components/Functions.vue";
 import Stacks from "~/components/Stacks.vue";
 import Settings from "~/components/Settings.vue";
+import { logout } from "@auth0/auth0-vue";
 const MAPPING = {
   chatbot: Chatbot,
   functions: Functions,
@@ -42,6 +43,7 @@ const tabs = ref([
 const logOut = () => {
   state.token = null;
   state.user = null;
+  logout();
   router.push("/");
 };
 const handleModal = (key: string) => {
