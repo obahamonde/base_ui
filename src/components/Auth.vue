@@ -35,11 +35,13 @@ watch(isAuthenticated, async (isAuthenticated) => {
 </script>
 <template>
   <Notifier />
-  <div v-if="isAuthenticated && state.user && state.token" class="col center h-full w-full mb-24">
+  <div v-if="isAuthenticated && state.user && state.token" class="col center h-screen w-full pb-24">
     <slot :user="state.user" :token="state.token" :logout="logout" />	
   </div>
-  <div v-else>
-    <div class="container">
+  <div v-else class="col center h-screen w-full">
+    <img src="/aiofauna.png" class="h-24 w-24 mt-32" />
+    <h1 class="text-4xl font-bold mt-4">AI Agents</h1>
+    <div class="col center h-screen">
       <button class="btn-get" @click="loginWithRedirect()">Login</button>
     </div>
   </div>

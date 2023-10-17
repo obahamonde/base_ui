@@ -2,5 +2,5 @@
 
 </script>
 <template>
-<MonacoEditor />
+<MonacoEditor/>
 </template>
